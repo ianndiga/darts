@@ -1,9 +1,6 @@
 // Abstraction: Define an abstract class with abstract methods.
 abstract class Animal {
-  // Abstract method (does not have implementation).
   void makeSound();
-
-  // Regular method with implementation.
   void sleep() {
     print("This animal is sleeping.");
   }
@@ -28,16 +25,9 @@ class Cat extends Animal {
 
 // Encapsulation: Class that encapsulates data (private variables) and methods.
 class BankAccount {
-  // Private variables (encapsulation)
   double _balance;
-
-  // Constructor to initialize balance.
   BankAccount(this._balance);
-
-  // Public method to access private balance.
   double get balance => _balance;
-
-  // Method to deposit money (controlled access to the balance).
   void deposit(double amount) {
     if (amount > 0) {
       _balance += amount;
@@ -47,7 +37,6 @@ class BankAccount {
     }
   }
 
-  // Method to withdraw money (controlled access to the balance).
   void withdraw(double amount) {
     if (amount <= _balance) {
       _balance -= amount;
@@ -64,10 +53,10 @@ void main() {
   Animal cat = Cat();
 
   print("Dog sound: ");
-  dog.makeSound(); // Output: Bark
+  dog.makeSound();
 
   print("Cat sound: ");
-  cat.makeSound(); // Output: Meow
+  cat.makeSound();
 
   // Demonstrating Encapsulation with BankAccount class
   BankAccount myAccount = BankAccount(1000);
