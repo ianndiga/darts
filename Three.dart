@@ -1,4 +1,3 @@
-// Abstraction: Define an abstract class with abstract methods.
 abstract class Animal {
   void makeSound();
   void sleep() {
@@ -6,9 +5,7 @@ abstract class Animal {
   }
 }
 
-// Inheritance: Subclass that inherits from Animal class.
 class Dog extends Animal {
-  // Polymorphism: Overriding the abstract method to provide a unique implementation.
   @override
   void makeSound() {
     print("Bark");
@@ -16,14 +13,12 @@ class Dog extends Animal {
 }
 
 class Cat extends Animal {
-  // Polymorphism: Overriding the abstract method to provide a unique implementation.
   @override
   void makeSound() {
     print("Meow");
   }
 }
 
-// Encapsulation: Class that encapsulates data (private variables) and methods.
 class BankAccount {
   double _balance;
   BankAccount(this._balance);
@@ -48,7 +43,6 @@ class BankAccount {
 }
 
 void main() {
-  // Demonstrating Polymorphism with Animal subclasses
   Animal dog = Dog();
   Animal cat = Cat();
 
@@ -57,8 +51,6 @@ void main() {
 
   print("Cat sound: ");
   cat.makeSound();
-
-  // Demonstrating Encapsulation with BankAccount class
   BankAccount myAccount = BankAccount(1000);
 
   print("\nInitial balance: \$${myAccount.balance}");
@@ -68,7 +60,5 @@ void main() {
 
   myAccount.withdraw(500);
   print("Updated balance after withdrawal: \$${myAccount.balance}");
-
-  // Trying to withdraw an invalid amount
-  myAccount.withdraw(2000); // Output: Insufficient funds.
+  myAccount.withdraw(2000);
 }
